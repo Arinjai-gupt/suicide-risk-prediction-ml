@@ -612,4 +612,4 @@ The authors and contributors are not responsible for any misuse of this tool. Th
 
 ---
 
-**Repository**: [github.com/yourusername/suicide-risk-prediction-ml](https://github.com/yourusername/suicide-risk-prediction-ml)
+**Repository**: [github.com/Arinjai-gupt/suicide-risk-prediction-ml](https://github.com/Arinjai-gupt/suicide-risk-prediction-ml)
