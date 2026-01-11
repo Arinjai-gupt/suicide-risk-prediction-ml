@@ -6,6 +6,17 @@ from pydantic import BaseModel
 
 app = FastAPI()
 
+from fastapi.middleware.cors import CORSMiddleware
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # allow Streamlit Cloud
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+
 # Define the model class (same as in notebook)
 class LogisticRegressionModel(nn.Module):
     def __init__(self, input_dim=5):

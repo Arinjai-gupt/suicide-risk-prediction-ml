@@ -124,7 +124,8 @@ if st.button("🔍 Predict Risk", use_container_width=True):
     }
 
     try:
-        response = requests.post("http://localhost:8000/predict", json=payload)
+        BACKEND_URL = "https://suicide-risk-prediction-ml-backend.onrender.com/predict"
+        response = requests.post(BACKEND_URL,json=payload,headers={"Content-Type": "application/json"},timeout=20)
         prob = response.json()["suicide_risk_probability"]
 
         st.markdown("<div class='card'>", unsafe_allow_html=True)
@@ -162,3 +163,4 @@ if st.button("🔍 Predict Risk", use_container_width=True):
 
     except:
         st.error("🚫 Backend not reachable. Please ensure FastAPI is running.")
+        
